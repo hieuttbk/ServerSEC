@@ -1,0 +1,5 @@
+keytool -keystore testkeys -genkey -alias testkeys 
+
+keytool -export -alias testkeys -file testkeys.cer -keystore testkeys
+
+keytool -import -file testkeys.cer -alias testkeys -keystore testTrustStore
